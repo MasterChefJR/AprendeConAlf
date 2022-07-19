@@ -60,21 +60,38 @@ print(Correo[:Correo.find('@')] + '@ceu.es')
 """Ejercicio 8
 Escribir un programa que pregunte por consola el precio de un producto en euros con dos decimales y muestre por pantalla el número de euros y el número 
 de céntimos del precio introducido.
+
+precio = int(input("Escrube una cantidad en centimos: "))
+print(f'Escribio {precio} y en euros serian {precio/10}')
 """
-precio = int(input("Total: "))
 
 
 """Ejercicio 9
 Escribir un programa que pregunte al usuario la fecha de su nacimiento en formato dd/mm/aaaa y muestra por pantalla, el día, el mes y el año. Adaptar 
 el programa anterior para que también funcione cuando el día o el mes se introduzcan con un solo carácter.
+
+fecha = input("Introduce una fecha en formato dd/mm/aaaa: ")
+print(f'Día {fecha[:2]}')
+print(f'Mes {fecha[3:5]}')
+print(f'Año {fecha[6:]}')
 """
 
 """Ejercicio 10
 Escribir un programa que pregunte por consola por los productos de una cesta de la compra, separados por comas, y muestre por pantalla cada uno de los 
 productos en una línea distinta.
+
+cesta = input('Introduce los productos separados por comas: ')
+print(cesta.replace(',', '\n'))
 """
+
 
 """Ejercicio 11
 Escribir un programa que pregunte el nombre el un producto, su precio y un número de unidades y muestre por pantalla una cadena con el nombre del 
 producto seguido de su precio unitario con 6 dígitos enteros y 2 decimales, el número de unidades con tres dígitos y el coste total con 8 dígitos enteros 
-y 2 decimales."""
+y 2 decimales.
+
+producto = input("Producto: ")
+precio = float(input("Precio: "))
+unidades = int(input("Unidades: "))
+print(f'Producto: {producto}, Precio: {precio}, Unidades: {unidades}\nTotal: {precio*unidades}')
+"""
