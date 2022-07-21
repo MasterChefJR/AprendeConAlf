@@ -74,14 +74,20 @@ Entre 20000€ y 35000€	20%
 Entre 35000€ y 60000€	30%
 Más de 60000€	45%
 Escribir un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo impositivo que le corresponde.
-"""
-# renta = float(input("Renta anual: "))
+
+renta = float(input("Renta anual: "))
 cantidad = [0,10000,20000,35000,60000]
-if renta >= 0 and renta <  10000:
-elif renta >= 10000 and renta < 10000  :
-elif renta >=  and renta <  :
-elif renta >=  and renta <  :
-elif renta >=  and renta <  :
+if renta >= cantidad[0] and renta <  cantidad[1]:
+    print("Pagas el 5%")
+elif renta >= cantidad[1] and renta < cantidad[2]:
+    print("Pagas el 15%")
+elif renta >= cantidad[2] and renta <  cantidad[3]:
+    print("Pagas el 20%")
+elif renta >= cantidad[3] and renta <=  cantidad[4]:
+    print("Pagas el 30%")
+elif renta > cantidad[4]:
+    print("Pagas el 45%")
+"""
 """Ejercicio 8
 En una determinada empresa, sus empleados son evaluados al final de cada año. Los puntos que pueden obtener en la evaluación comienzan en 0.0 y pueden ir aumentando, traduciéndose en 
 mejores beneficios. Los puntos que pueden conseguir los empleados pueden ser 0.0, 0.4, 0.6 o más, pero no valores intermedios entre las cifras mencionadas. A continuación se muestra una
@@ -92,12 +98,33 @@ Inaceptable	0.0
 Aceptable	0.4
 Meritorio	0.6 o más
 Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
+
+Puntos = float(input("Puntos conseguidos: "))
+Salario = 2400
+Rendimiento = ["Insuficiente", "Aceptable", "Meritorio"]
+if Puntos >= 0 and Puntos < 0.4:
+    Rendimiento = Rendimiento[0]
+elif Puntos >= 0.4 and Puntos < 0.6:
+    Rendimiento = Rendimiento[1]
+elif Puntos >= 0.6 and Puntos:
+    Rendimiento = Rendimiento[2]
+print(f'Su bono total = {(Puntos+1)*Salario}\n{Rendimiento}')
 """
+
+
 
 """Ejercicio 9
 Escribir un programa para una empresa que tiene salas de juegos para todas las edades y quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. 
 El programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ 
 y si es mayor de 18 años, 10€.
+
+Edad = int(input("Edad: "))
+Precios = "Gratis"
+if Edad >=4 and Edad < 18:
+    Precios = "5 Euros"
+elif Edad >=18:
+    Precios = "10 Euros"
+print(f'Costo: {Precios}')
 """
 
 """Ejercicio 10
@@ -108,5 +135,37 @@ Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
 Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en función de su respuesta le muestre un menú con los ingredientes disponibles para que elija. Solo se 
 puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas. Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los 
 ingredientes que lleva.
-"""
 
+
+# Ingredientes vegetarianos: Pimiento y tofu.
+# Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+Ingredientes = ["Tomate", "Mozzarella"]
+Eleccion = input("Desea una pizza vegetariana [Y] o [N] \n")
+Eleccion = Eleccion.upper()
+if Eleccion[0] == 'Y':
+    Pizza_Vegetariana = ["Pimiento", "Tofu"]
+    Eleccion_Vegetariana = int(input(f'Seleccione un Ingrediente\n1- {Pizza_Vegetariana[0]}\n2- {Pizza_Vegetariana[1]}\n'))
+    if Eleccion_Vegetariana == 1:
+        Ingredientes.append(Pizza_Vegetariana[0])
+    elif Eleccion_Vegetariana == 2:
+        Ingredientes.append(Pizza_Vegetariana[1])
+    else:
+        Ingredientes = ""
+        print("Error, intente de nuevo")
+elif Eleccion[0] == 'N':
+    Pizza_Clasica = ["Peperoni", "Jamon", "Salmon"]
+    Eleccion_Vegetariana = int(input(f'Seleccione un Ingrediente\n1- {Pizza_Clasica[0]}\n2- {Pizza_Clasica[1]}\n3- {Pizza_Clasica[2]}\n'))
+    if Eleccion_Vegetariana == 1:
+        Ingredientes.append(Pizza_Clasica[0])
+    elif Eleccion_Vegetariana == 2:
+        Ingredientes.append(Pizza_Clasica[1])
+    elif Eleccion_Vegetariana == 3:
+        Ingredientes.append(Pizza_Clasica[2])
+    else:
+        Ingredientes = ""
+        print("Error, intente de nuevo")
+else:
+    Ingredientes = ""
+    print("Error, intente de nuevo")
+print(f'pizza: {Ingredientes}')
+"""
