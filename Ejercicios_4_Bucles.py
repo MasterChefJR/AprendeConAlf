@@ -62,24 +62,41 @@ Escribir un programa que pida al usuario un número entero y muestre por pantall
 5 3 1
 7 5 3 1
 9 7 5 3 1
+
+Numero = int(input("escribe un numero: "))
+for i in range(1,Numero+1, 2):
+    for j in range(i, 0,-2):
+        print(j, end=" ")
+    print("")
 """
-Numero = int(input("Tabla de Multiplicar: "))
-for i in range(1,Numero,2):
-    print(i)
-    for j in range(i,0):
-        print(j)
 """
 Ejercicio 9
 Escribir un programa que almacene la cadena de caracteres contraseña en una variable, pregunte al usuario por la contraseña hasta que introduzca la contraseña correcta.
+
+contrasenia = input("Contraseña: ")
+password = "cacahuate"
+while contrasenia != password:
+    contrasenia = input("Contraseña: ")
+print(f"Su contraseña es: {contrasenia}")
 """
 """
 Ejercicio 10
 Escribir un programa que pida al usuario un número entero y muestre por pantalla si es un número primo o no.
-"""
 
+n = int(input("Numero: "))
+v = True
+for i in range(2,n):
+    if n % i == 0:
+        print(f'{n} No Es Primo')
+        v = False
+        break
+if v:
+    print(f'{n} Es Primo')
+"""
 """Ejercicio 11
 Escribir un programa que pida al usuario una palabra y luego muestre por pantalla una a una las letras de la palabra introducida empezando por la última.
 """
+
 """
 Ejercicio 12
 Escribir un programa en el que se pregunte al usuario por una frase y una letra, y muestre por pantalla el número de veces que aparece la letra en la frase.
