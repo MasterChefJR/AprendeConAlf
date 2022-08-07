@@ -95,12 +95,16 @@ if v:
 """
 """Ejercicio 11
 Escribir un programa que pida al usuario una palabra y luego muestre por pantalla una a una las letras de la palabra introducida empezando por la última.
-"""
 
+palabra = input("Palabra: ")
+for i in range(len(palabra)-1,-1,-1):
+    print(palabra[i])
+"""
 """
 Ejercicio 12
 Escribir un programa en el que se pregunte al usuario por una frase y una letra, y muestre por pantalla el número de veces que aparece la letra en la frase.
 """
+
 """
 Ejercicio 13
 Escribir un programa que muestre el eco de todo lo que el usuario introduzca hasta que el usuario escriba “salir” que terminará.
