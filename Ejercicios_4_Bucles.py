@@ -104,7 +104,12 @@ for i in range(len(palabra)-1,-1,-1):
 Ejercicio 12
 Escribir un programa en el que se pregunte al usuario por una frase y una letra, y muestre por pantalla el número de veces que aparece la letra en la frase.
 """
-
+palabra = input("Palabra: ")
+Letra = input("Letra: ")
+for i in range(len(palabra)):
+    if Letra in palabra:
+        print("1")
+    else: print("0")
 """
 Ejercicio 13
 Escribir un programa que muestre el eco de todo lo que el usuario introduzca hasta que el usuario escriba “salir” que terminará.
