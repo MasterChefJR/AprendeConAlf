@@ -83,14 +83,30 @@ for i in range(0, len(abecedario), 3):
 Ejercicio 8
 Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
 Palindromos " Son palabras que son iguales de derecha a izquierda y de izquierda a derecha, ejemplo= "radar, oso, reconocer, ala"
-"""
+
 Palabra = input("Palindromo: ")
-for i in range(len(Palabra)):
-    print(Palabra[i])
+Palabra_Reversa = Palabra
+Palabra = list(Palabra)
+Palabra_Reversa = list(Palabra_Reversa)
+Palabra_Reversa.reverse()
+if Palabra == Palabra_Reversa:
+    print("Palindromo")
+else:
+    print("No es palindromo")
+"""
+
 """
 Ejercicio 9
 Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
 """
+Nombre = input("Escribe una palabra: ")
+vocabulario = ["A","E","I","O","U"]
+for i in range(len(vocabulario)):
+    for j in Nombre:
+        
+
+
+
 """
 Ejercicio 10
 Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, y muestre por pantalla el menor y el mayor de los precios.
