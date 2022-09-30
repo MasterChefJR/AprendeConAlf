@@ -103,7 +103,7 @@ Nombre = input("Escribe una palabra: ")
 vocabulario = ["A","E","I","O","U"]
 for i in range(len(vocabulario)):
     for j in Nombre:
-        
+        print()
 
 
 
