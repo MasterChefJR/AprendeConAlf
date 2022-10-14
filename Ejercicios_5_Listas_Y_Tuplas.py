@@ -98,30 +98,55 @@ else:
 """
 Ejercicio 9
 Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+
+nombre = input("Palabra: ")
+vocal = ["a","e","i","o","u"]
+for i in vocal:
+    total = 0
+    for j in nombre:
+        if j == i:
+            total+=1
+    print(f'Tu palabra {i} aparece un total de {total} veces')
 """
-Nombre = input("Escribe una palabra: ")
-vocabulario = ["A","E","I","O","U"]
-for i in range(len(vocabulario)):
-    for j in Nombre:
-        print()
-
-
 
 """
 Ejercicio 10
 Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, y muestre por pantalla el menor y el mayor de los precios.
+
+precios = [50, 75, 46, 22, 80, 65, 8]
+minimo = precios[0]
+maximo = precios[0]
+for i in precios:
+    if i < minimo:
+        minimo = i
+    elif i > maximo:
+        maximo = i
+print(minimo)
+print(maximo)
+
+# Se puede hacer tammbien de la siguiente manera
+# precios = [50, 75, 46, 22, 80, 65, 8]
+# print(min(precios))
+# print(max(precios))
 """
 """
 Ejercicio 11
 Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas y muestre por pantalla su producto escalar.
+
+vec1 = [1,2,3] 
+vec2 = [-1,0,2]
+suma = 0
+for i in range(3):
+    suma += vec1[i]*vec2[i]
+print(suma)
 """
+
 """
 Ejercicio 12
 Escribir un programa que almacene las matrices
  A = (1 2 3)   y  B =  (-1 0)
      (4 5 6)            (0 1)
-                        (1 1)
-                        
+                        (1 1)               
 en una lista y muestre por pantalla su producto.
 Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
 """ 
