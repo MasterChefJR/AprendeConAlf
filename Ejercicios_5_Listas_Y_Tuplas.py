@@ -150,7 +150,44 @@ Escribir un programa que almacene las matrices
 en una lista y muestre por pantalla su producto.
 Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
 """ 
+# A = ((1, 2, 3), 
+#     (4, 5, 6))
 
+# B = ((-1, 0), 
+#     (0, 1), 
+#     (1, 1))
+
+# resultado = [[0, 0], 
+#             [0, 0]]   
+a = ((1, 2, 3),
+     (4, 5, 6))
+b = ((1, 2),
+     (3, 4),
+     (5,6))
+result = [[0,0],
+          [0,0]]
+for i in range(len(a)):
+    # print(i,end="i-----\n")
+    for j in range(len(b[0])):
+        # print(j,end="j-----\n")        
+        for k in range(len(b)):
+            # print(k,end="k-----\n")
+            print(result[i][j],end="result\n")
+            print(a[i][k],end="A\n")
+            print(b[k][j],end="B\n")
+            result[i][j] += a[i][k] * b[k][j]
+            # print(result[i],end="i*******\n")
+            # print(result[j],end="j*******\n")
+# print(f'{i}i {j}j {k}k {result}result')
+
+# for i in range(len(result)):
+#     result[i] = tuple(result[i])
+#     print(i,end="i[1]-----\n")
+# result = tuple(result)
+# print(result,end="test[1]")
+# for i in range(len(result)):
+#     print(result[i],end="resultado\n")
+#     print(i,end="i[2]-----\n")
 """
 Ejercicio 13
 Escribir un programa que pregunte por una muestra de números, separados por comas, los guarde en una lista y muestre por pantalla su media y desviación típica.
