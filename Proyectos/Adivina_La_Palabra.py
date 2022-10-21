@@ -3,22 +3,29 @@ import random
 #     with open("animales.txt") as a:
 #         p = a.read()
 #         return p
+# DECLARAMOS LA LISTA DE LOS ANIMALES
 x = random.randrange(0,20)
-animales = ["hog", "mole", "puppy", "beaver" ,"cow" , "kangaroo" , "koala" , "oryx", "lynx", "anteater", "parakeet", "aardvark", "squirrel", "elk", "crow", "gila monster", "pony", "horse", "musk deer", "walrus"]
+animales = ["hog", "mole", "puppy", "beaver" ,"cow" , "kangaroo" , "koala" , "oryx", "lynx", "anteater", "parakeet", "aardvark", "squirrel", "elk", 
+"crow", "gila monster", "pony", "horse", "musk deer", "walrus"]
 z = (animales[x])
-x = True
-for i in z:
-    print(i,end=",")
+# vISUALISAMOS LOS ANIMALES QUE SALGAN
+for x in z:
+    print(x,end=",")
 print(z[0:len(z)])
-palabra = "Hola Mundo"
+nombre = ''
+# ADIVINAMOS LA PALABRA DEL ANIMAL
+x = True
 while x:
-    c = 6
-    nombre = input("Escribe la palabra clave:")
-    
-    if nombre != palabra:
-        c = c-1
-        print(f'Te quedan {c}')
-    if len(nombre) >1:
+    c = 7
+    if nombre != z[x]:
+        for i in range(0,7):
+            if nombre == z[x]:
+                print(f'Correcto {nombre} Tienes {c} vidas')
+            elif nombre != z[x]:
+                c = c-1
+            nombre = input("Escribe la palabra clave:")
+            print(f'Te quedan {c} vidas')
+    if c == 0 or len(nombre) >1:
         x = False
 
 # while x:
