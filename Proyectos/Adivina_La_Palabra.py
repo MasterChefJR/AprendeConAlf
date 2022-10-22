@@ -1,30 +1,37 @@
-import random
 # Tabla para los animales
 # def hello():
 #     with open("animales.txt") as a:
 #         p = a.read()
 #         return p
+
 # DECLARAMOS LA LISTA DE LOS ANIMALES Y SELECCIONAMOS AL ANIMAL
-x = random.randint(0,20)
+import random
+x = random.randint(0,18)
 animales = ["hog", "mole", "puppy", "beaver" ,"cow" , "kangaroo" , "koala" , "oryx", "lynx", "anteater", "parakeet", "aardvark", "squirrel", "elk", 
-"crow", "gila monster", "pony", "horse", "musk deer", "walrus"]
+"crow", "pony", "horse", "walrus"]
 animal = (animales[x])
 largo = len(animal)
+Vidas = 7
 print(f'animal: {animal}\nPalabras: {largo}')
 # ADIVINAMOS LA PALABRA DEL ANIMAL
-    # continue
-Vidas = 7
-for i in range(0,Vidas):
-    for x in range(0,largo):
-        print(animal[x])
-    nombre = input(f'Tienes {Vidas} Vidas Escribe Una Letra\n')
+# Terminar ciclo
+
+while Vidas > 1:
+    for i in range(0,largo):
+        nombre = input(f'Tienes {Vidas} Vidas Escribe Una Letra\n')
+        if nombre != animal[i]:
+            print(animal[i])
+            Vidas = Vidas-1
+        elif nombre == animal[i]:
+            respuesta = []
+            respuesta.append(nombre)
+            print(respuesta)
+            if respuesta == animal:
+                print("Ganaste")
+        if Vidas == 0 or len(nombre) >1:
+            break
     if Vidas == 0 or len(nombre) >1:
         break
-    elif nombre[0] != animal[x]:
-        Vidas = Vidas-1
-        print(f'Tienes {Vidas} Vidas Vuelve a intentarlo')
-    elif nombre[0] == animal[x]:
-        print(animal[x]+" s")
 
 # while x:
 #     palabra = input("Adivina el nombre del animal\nEscribe una letra: ")
