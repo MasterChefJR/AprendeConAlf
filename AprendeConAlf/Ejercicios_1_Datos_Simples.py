@@ -44,7 +44,7 @@ La suma de los  primeros enteros positivos puede ser calculada de la siguiente f
 
 n = int(input("Escribe un entero positivo: "))
 suma=n*(n+1)/2
-print(f'La suma de 1 al {n} = {suma}')
+print(f'La suma de 1 al {n} = {int(suma)}')
 """
 
 
