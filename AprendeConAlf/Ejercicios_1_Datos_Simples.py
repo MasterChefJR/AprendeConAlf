@@ -113,3 +113,7 @@ print("El coste de una barra fresca es " + str(precio) + "€")
 print("El descuento sobre una barra no fresca es " + str(descuento * 100) + "%")
 print("El coste final a pagar es " + str(round(coste, 2)) + "€")
 """
+x = int(input("numero: "))
+for i in range(1,x+1):
+    print('"'+str(i)+'" ',end="")
+    # print(end="")
