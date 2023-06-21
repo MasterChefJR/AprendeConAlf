@@ -57,13 +57,16 @@ print(f'Tu IMC es: {round(idmc,2)}')
 """
 
 """Ejercicio 8
-Escribir un programa que pida al usuario dos números enteros y muestre por pantalla la <n> entre <m> da un cociente <c> y un resto <r> donde <n> y <m> son
+Escribir un programa que pida al usuario dos números enteros y muestre por pantalla la <n> entre <m> da un cociente <c> y un resto <r> 
+donde <n> y <m> son
 los números introducidos por el usuario, y <c> y <r> son el cociente y el resto de la división entera respectivamente.
 """
 
+
 """Ejercicio 9
-Escribir un programa que pregunte al usuario una cantidad a invertir, el interés anual y el número de años, y muestre por pantalla el capital obtenido en
-la inversión.
+Escribir un programa que pregunte al usuario una cantidad a invertir, el interés anual y el número de años, y muestre por pantalla el capital
+obtenido en la inversión.
+
 """
 
 """Ejercicio 10
