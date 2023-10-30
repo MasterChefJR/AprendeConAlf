@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "perro",
+      "request": "launch",
+      "mainClass": "perro",
+      "projectName": "AprendeConAlf_558ea8ac"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",

@@ -105,7 +105,8 @@ tercer_pago =Segundo_pago*interes_anual
 print(f'Tercer año: {round(tercer_pago,2)}')
 """
 
-"""Ejercicio 12
+"""
+Ejercicio 12
 Una panadería vende barras de pan a 3.49€ cada una. El pan que no es el día tiene un descuento del 60%. Escribir un programa que comience leyendo el número de barras vendidas que no son del 
 día. Después el programa debe mostrar el precio habitual de una barra de pan, el descuento que se le hace por no ser fresca y el coste final total.
 
@@ -116,3 +117,9 @@ print(f'Precio habitual del pan: {pan}€')
 print("Descuento por no ser fresca: 60%")
 print(round(total*(1-60/100),2))
 """
+x = int(4)
+
+for i in range(x,0,-1):
+    c = [i]
+    c *= i
+    print(c)
