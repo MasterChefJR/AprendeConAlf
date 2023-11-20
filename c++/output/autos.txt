@@ -1,2 +1,0 @@
-bmw,rrrwhite,blanco chidori,3000,5
-ferrari,mmmmmmm,blanco rapido,20000,5
