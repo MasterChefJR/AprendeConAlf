@@ -150,7 +150,6 @@ Escribir un programa que almacene las matrices
 en una lista y muestre por pantalla su producto.
 Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
 
-""" 
 a = ((1, 2, 3), 
     (4, 5, 6))
 b = ((-1, 0), 
@@ -167,6 +166,7 @@ for i in range(len(result)):
 result = tuple(result)
 for i in range(len(result)):
     print(result[i])
+""" 
 # ESTUDIAR[][][][][][[][[][][][[][][][[][][]][][][][[]][]]]]
 """
 Ejercicio 13
@@ -186,3 +186,13 @@ Escribir un programa que pregunte por una muestra de números, separados por com
 # mean = sum/n
 # stdev = (sumsq/n-mean**2)**(1/2)
 # print('La media es', mean, ', y la desviación típica es', stdev)
+precios = [50, 75, 46, 22, 80, 65, 8]
+minimo = precios[0]
+maximo = precios[0]
+for i in precios:
+    if i < minimo:
+        minimo = i
+    elif i > maximo:
+        maximo = i
+print(minimo)
+print(maximo)
